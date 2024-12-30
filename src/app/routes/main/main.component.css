@@ -1,0 +1,306 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  /* Hero section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f8ff;
+  }
+  
+  .hero-text {
+    max-width: 50%;
+  }
+  
+  .hero-text h1 {
+    font-size: 48px;
+    margin: 0;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .hero-images {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #ffffff; 
+    padding: 20px; 
+  }
+  
+  .hero-images img {
+    max-width: 100%;
+    height: auto; 
+  }
+  
+  
+  
+  
+  
+  /* About Section */
+  .about {
+    padding: 40px 20px;
+    background-color: #fff;
+  }
+  
+  .about-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .about-image img {
+    width: 400px;
+    border-radius: 8px;
+  }
+  
+  .about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .about-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .about-list .icon img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .about-list b {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .about-list p {
+    color: #555;
+    margin: 0;
+  }
+  
+  .image-placeholder {
+    width: 300px;
+    height: 200px;
+    background-color: #ddd;
+  }
+  
+  .about-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-content li {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  /* Join section */
+  .join {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(90deg, #A3E635, #93D128);
+    border-radius: 15px;
+    margin: 20px 20px;
+    text-align: center;
+  }
+  
+  .join-content {
+    color: white;
+    max-width: 600px;
+  }
+  
+  .join-content h2 {
+    font-size: 32px;
+    margin: 0 0 10px;
+  }
+  
+  .join-content p {
+    font-size: 18px;
+    margin: 0 0 20px;
+  }
+  
+  .btn-join {
+    background-color: white;
+    color: #A3E635;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-join:hover {
+    background-color: #e6ffe6;
+  }
+  
+  
+  
+  
+  /* Загальні стилі */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .services {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+  }
+  
+  .filters {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filters h3,
+  .filters h4 {
+    margin: 0 0 10px;
+  }
+  
+  .filter-btn {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .filter-btn.active,
+  .filter-btn:hover {
+    background-color: #A3E635;
+    color: #fff;
+  }
+  
+  .apply-btn,
+  .reset-btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #A3E635;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .reset-btn {
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  .reset-btn:hover {
+    background-color: #bbb;
+  }
+  
+  /* Список послуг */
+  .services-list {
+    flex: 3;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar h1 {
+    margin: 0;
+  }
+  
+  .search {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+  }
+  
+  .search-btn {
+    padding: 8px 16px;
+    background-color: #A3E635;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .service {
+    display: flex;
+    gap: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .service-info {
+    flex: 1;
+  }
+  
+  .service-info h3 {
+    margin: 0 0 5px;
+  }
+  
+  .service-info p {
+    margin: 0 0 5px;
+    color: #555;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #A3E635;
+  }
+  
+  .more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: #A3E635;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .more-btn:hover {
+    text-decoration: underline;
+  }
+  
+  

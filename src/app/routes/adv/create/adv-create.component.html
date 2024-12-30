@@ -1,0 +1,58 @@
+<div class="form-container">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Вкажіть назву</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="form-control"
+          placeholder="Наприклад, Обприскування компанією Львівмото"
+          ngModel
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Опис</label>
+        <textarea
+          id="description"
+          name="description"
+          class="form-control"
+          placeholder="Додайте більше деталей про послугу/техніку"
+          ngModel
+          rows="3"
+        ></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="location">Місцезнаходження</label>
+        <input
+          type="text"
+          id="location"
+          name="location"
+          class="form-control"
+          placeholder="Введіть назву міста"
+          ngModel
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="price">Ціна</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          class="form-control"
+          placeholder="Вкажіть ціну"
+          ngModel
+        />
+      </div>
+  
+      <div class="form-actions">
+        <button type="button" class="btn btn-secondary" (click)="onCancel()">Відмінити</button>
+        <button type="submit" class="btn btn-success">Опублікувати</button>
+      </div>
+    </form>
+  </div>
+  
