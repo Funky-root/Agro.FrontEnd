@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="filters">
+      <h3>Фільтри:</h3>
+      <div>
+        <label>Ціна</label>
+        <input type="number" placeholder="Від" [(ngModel)]="filters.priceFrom" />
+        <input type="number" placeholder="До" [(ngModel)]="filters.priceTo" />
+      </div>
+      <div>
+        <label>Область</label>
+        <select [(ngModel)]="filters.region">
+          <option>Уся Україна</option>
+        </select>
+      </div>
+      <div>
+        <label>Район</label>
+        <select [(ngModel)]="filters.district">
+          <option>Уся Україна</option>
+        </select>
+      </div>
+      <div>
+        <label>Населений пункт</label>
+        <select [(ngModel)]="filters.city">
+          <option>Уся Україна</option>
+        </select>
+      </div>
+      <div>
+        <h4>Сортування:</h4>
+        <button (click)="sort('default')">За замовчуванням</button>
+        <button (click)="sort('asc')">За зростанням ціни</button>
+        <button (click)="sort('desc')">За спаданням ціни</button>
+      </div>
+      <button (click)="applyFilters()">Застосувати</button>
+      <button (click)="resetFilters()">Скинути</button>
+    </div>
+  
+    <div class="services">
+      <h2>Послуги</h2>
+      <input type="text" placeholder="Пошук" [(ngModel)]="searchQuery" />
+      <button (click)="search()">Знайти</button>
+  
+      <div *ngFor="let service of filteredServices">
+        <div class="service-card">
+          <img [src]="service.image" alt="Техніка" />
+          <h3>{{ service.name }}</h3>
+          <p>{{ service.location }}</p>
+          <p>Техніка: {{ service.equipment }}</p>
+          <p>Рік випуску: {{ service.year }}</p>
+          <p>{{ service.price }} грн/га</p>
+          <a href="#">Більше →</a>
+        </div>
+      </div>
+  
+      <div class="pagination">
+        <button *ngFor="let page of pages" (click)="goToPage(page)">{{ page }}</button>
+      </div>
+    </div>
+  </div>
+  
+  
