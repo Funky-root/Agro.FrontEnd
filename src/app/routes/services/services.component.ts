@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { NgModel} from '@angular/forms';
+import { FormsModule, NgModel} from '@angular/forms';
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
-  styleUrls: ['./services.component.css']
+  styleUrls: ['./services.component.css'],
+  standalone: true,
+  imports: [FormsModule ]
 })
 export class ServicesComponent {
   services = [
