@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css'],
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.css'],
   standalone: true,
   imports: [CommonModule],
 })
-export class ProfileComponent {
-  title = 'AgroTracker';
+export class CardComponent {
 }

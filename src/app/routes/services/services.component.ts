@@ -17,7 +17,6 @@ export class ServicesComponent {
       price: 4502,
       image: 'path/to/image.jpg'
     },
-    // Додайте більше об'єктів
   ];
 
   filters = {

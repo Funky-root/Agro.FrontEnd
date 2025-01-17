@@ -1,0 +1,61 @@
+/* Стиль для контейнера картки */
+.card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-image {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+  }
+  .card-details {
+    flex-grow: 1;
+    margin-left: 16px;
+  }
+  
+  .card-details h3 {
+    margin: 0 0 8px;
+  }
+  
+  .card-details p {
+    margin: 4px 0;
+  }
+  
+  .card-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 16px;
+  }
+  
+  
+  .edit-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #4caf50;
+  }
+  
+  .edit-button:hover {
+    color: #388e3c;
+  }
+  
+  .delete-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #f44336;
+  }
+  
+  .delete-button:hover {
+    color: #d32f2f;
+  }
+  
