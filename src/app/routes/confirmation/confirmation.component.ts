@@ -4,12 +4,13 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-confirmation',
   templateUrl: './confirmation.component.html',
-  styleUrls: ['./confirmation.component.css']
+  styleUrls: ['./confirmation.component.css'],
+  standalone: true,
 })
 export class ConfirmationComponent {
-  //constructor(private router: Router) {}
+  constructor(private router: Router) {}
 
-  //navigateToHome(): void {
-    //this.router.navigate(['/main']); // Шлях до головної сторінки
-  //}
+  navigateToHome(): void {
+    this.router.navigate(['/main']); // Шлях до головної сторінки
+  }
 }
