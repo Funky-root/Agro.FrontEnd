@@ -8,12 +8,12 @@ import { ProfileComponent } from './routes/profile/profile.component';
 import { CardComponent } from './routes/card/card.component';
 import { ConfirmationComponent } from './routes/confirmation/confirmation.component';
 import { ChangesComponent } from './routes/changes/changes.component';
-import { WindowComponent } from './routes/window/window.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SignupComponent, AdvCreateComponent, AppComponent, MainComponent, HeaderComponent, ProfileComponent, CardComponent, ChangesComponent ],
+  imports: [RouterOutlet, SignupComponent, AdvCreateComponent, AppComponent, MainComponent, HeaderComponent, ProfileComponent, CardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
