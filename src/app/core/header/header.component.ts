@@ -6,7 +6,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet, RouterModule ],
   templateUrl: 'header.component.html',
-  styleUrl: 'header.component.scss'
+  styleUrl: 'header.component.css'
 })
 export class HeaderComponent {
   title = 'agrot';
