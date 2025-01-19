@@ -6,6 +6,9 @@ import { MainComponent } from './routes/main/main.component';
 import { HeaderComponent } from "./core/header/header.component";
 import { ProfileComponent } from './routes/profile/profile.component';
 import { CardComponent } from './routes/card/card.component';
+import { ConfirmationComponent } from './routes/confirmation/confirmation.component';
+import { ChangesComponent } from './routes/changes/changes.component';
+
 
 @Component({
   selector: 'app-root',
