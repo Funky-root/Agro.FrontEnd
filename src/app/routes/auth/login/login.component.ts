@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms'; 
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
@@ -10,7 +11,9 @@ import { BrowserModule } from '@angular/platform-browser';
   standalone: true,
 imports: [
     FormsModule,
-    ReactiveFormsModule]
+    ReactiveFormsModule,
+    RouterModule, RouterOutlet
+  ]
 })
 export class SignupComponent {
   signupForm: FormGroup;

@@ -5,8 +5,8 @@ import { SignupComponent } from './routes/auth/login/login.component';
 import { ProfileComponent } from './routes/profile/profile.component';
 import { AdvViewComponent } from './routes/adv-view/adv-view.component';
 export const routes: Routes = [
-    { path: '', component: AdvViewComponent},
-    //{ path: 'login', component: SignupComponent},
-    //{ path: 'login', component: ProfileComponent },
-    //{path: 'create', component: AdvCreateComponent }
+    { path: '', component: MainComponent},
+    { path: 'login', component: SignupComponent},
+    { path: 'auth', component: ProfileComponent },
+    {path: 'create', component: AdvCreateComponent }
 ];
