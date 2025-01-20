@@ -1,0 +1,14 @@
+<div class="container">
+    <router-outlet></router-outlet>
+    <div class="sidebar">
+        <img src="assets/img/Logo.svg" alt="AgroTracker Logo">
+        <h1>AgroTracker</h1>
+    </div>
+    <div class="form-section">
+        <h2>Вхід</h2>
+        <p>Немає акаунту? <a routerLink="/register">Зареєструватися</a></p>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Пароль" maxlength="8">
+        <button (click)="login()">Увійти</button>
+    </div>
+  </div>

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-
+import { RouterModule, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-machine-details',
   templateUrl: './adv-view.component.html',
-  styleUrls: ['./adv-view.component.css']
+  styleUrls: ['./adv-view.component.css'],
+  standalone: true,
+  imports: [RouterModule, RouterOutlet]
 })
 export class AdvViewComponent {
   machineDetails = {

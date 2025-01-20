@@ -5,17 +5,21 @@ import { SignupComponent } from './routes/auth/login/login.component';
 import { ConfirmationComponent } from './routes/confirmation/confirmation.component';
 import { ChangesComponent } from './routes/changes/changes.component';
 import { ProfileComponent } from './routes/profile/profile.component';
-
-
+import { AdvViewComponent } from './routes/adv-view/adv-view.component';
+import { SignComponent } from './routes/sign in/sign.component';
 export const routes: Routes = [
     { path: '', component: MainComponent},
-<<<<<<< HEAD
-    { path: 'login', component: SignupComponent},
+    { path: 'login', component: SignComponent},
+    { path: 'register', component: SignupComponent},
     { path: 'auth', component: ProfileComponent },
-    {path: 'create', component: AdvCreateComponent }
-=======
-    //{ path: 'login', component: SignupComponent},
-    //{ path: 'login', component: ProfileComponent },
-    //{path: 'create', component: AdvCreateComponent }
->>>>>>> 5e48175ae4c5ffddfe339568e290bb73bdf5eb6d
+    { path: 'create', component: AdvCreateComponent },
+    { path: 'edit', component: ChangesComponent },
+    {path: 'confirm', component: ConfirmationComponent},
+    { path: 'navigate', component: MainComponent},
+    { path: 'more', component: AdvViewComponent},
+    { path: 'change', component: AdvCreateComponent},
+    { path: 'cancel', component: ProfileComponent },
+
+    
+
 ];

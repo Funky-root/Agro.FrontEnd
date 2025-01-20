@@ -26,10 +26,17 @@
     gap: 20px;
   }
   
-  .images img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
+  .images {
+    display: flex;
+    gap: 10px;
+  }
+
+  .img
+  {
+    width: 100px; /* задає квадратний розмір */
+    height: 100px; /* задає квадратний розмір */
+    object-fit: cover; /* зберігає співвідношення кадру */
+    border-radius: 5px; /* додає трохи заокруглення */
   }
   
   .details {

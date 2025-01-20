@@ -22,15 +22,29 @@
   }
   
   .btn-register {
-    background-color: #93D128;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+    background-color: #93D128; /* Зелений фон */
+    color: white; /* Білий текст (хоча у випадку з іконкою це не обов’язково) */
+    border: none; /* Без рамки */
+    width: 50px; /* Ширина кнопки */
+    height: 50px; /* Висота кнопки */
+    border-radius: 50%; /* Робить кнопку круглою */
+    display: flex; /* Використання Flexbox для центрування */
+    justify-content: center; /* Горизонтальне центрування */
+    align-items: center; /* Вертикальне центрування */
+    cursor: pointer; /* Зміна курсора на вказівник */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Невелика тінь */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Анімація */
+}
   
   .btn-register:hover {
     background-color: #93D128;
+  }
+
+  .btn-icon
+  {
+    width: 60%; /* Розмір іконки всередині кнопки */
+    height: 60%; /* Масштабування */
+    object-fit: cover
+     
   }
   
