@@ -33,10 +33,10 @@
 
   .img
   {
-    width: 100px; /* задає квадратний розмір */
-    height: 100px; /* задає квадратний розмір */
-    object-fit: cover; /* зберігає співвідношення кадру */
-    border-radius: 5px; /* додає трохи заокруглення */
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 5px; 
   }
   
   .details {

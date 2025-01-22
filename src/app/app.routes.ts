@@ -14,7 +14,7 @@ export const routes: Routes = [
     { path: 'auth', component: ProfileComponent },
     { path: 'create', component: AdvCreateComponent },
     { path: 'edit', component: ChangesComponent },
-    {path: 'confirm', component: ConfirmationComponent},
+    { path: 'confirm', component: ConfirmationComponent},
     { path: 'navigate', component: MainComponent},
     { path: 'more', component: AdvViewComponent},
     { path: 'change', component: AdvCreateComponent},

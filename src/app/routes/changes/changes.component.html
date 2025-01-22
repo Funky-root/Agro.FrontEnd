@@ -12,32 +12,27 @@
     <form>
       <div class="form-group">
         <label for="firstName">Ім'я</label>
-        <input type="text" id="firstName" placeholder="Введіть ім'я" />
+        <input type="text" id="firstName" placeholder="Введіть ім'я" maxlength="30" />
       </div>
 
       <div class="form-group">
         <label for="lastName">Прізвище</label>
-        <input type="text" id="lastName" placeholder="Введіть прізвище" />
+        <input type="text" id="lastName" placeholder="Введіть прізвище" maxlength="30" />
       </div>
 
       <div class="form-group">
         <label for="email">Електронна пошта</label>
-        <input type="email" id="email" placeholder="Введіть email" />
+        <input type="email" id="email" placeholder="Введіть email" maxlength="30" />
       </div>
 
       <div class="form-group">
         <label for="phone">Номер телефону</label>
-        <input type="tel" id="phone" placeholder="Введіть номер телефону" />
-      </div>
-
-      <div class="form-group">
-        <label for="password">Пароль</label>
-        <input type="password" id="password" placeholder="Введіть пароль" />
+        <input type="tel" id="phone" placeholder="Введіть номер телефону" maxlength="12" />
       </div>
 
       <div class="form-group">
         <label for="description">Опис</label>
-        <textarea id="description" placeholder="Напишіть короткий опис"></textarea>
+        <input id="description" placeholder="Напишіть короткий опис" maxlength="1000">
       </div>
 
       <button type="submit" class="save-btn">Зберегти зміни</button>
