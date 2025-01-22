@@ -9,14 +9,20 @@ import { CardComponent } from './routes/card/card.component';
 import { ConfirmationComponent } from './routes/confirmation/confirmation.component';
 import { ChangesComponent } from './routes/changes/changes.component';
 import { SignComponent } from './routes/sign in/sign.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+//import { AgroServiceService } from './agro-service.service';
+import { FormsModule } from '@angular/forms';
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SignupComponent, AdvCreateComponent, AppComponent, MainComponent, HeaderComponent, ProfileComponent, CardComponent, ChangesComponent,SignComponent, ConfirmationComponent],
+  imports: [RouterOutlet, SignupComponent, AdvCreateComponent, AppComponent, MainComponent, HeaderComponent, ProfileComponent, CardComponent, ChangesComponent,SignComponent, ConfirmationComponent, HttpClientModule, FormsModule],
+  providers: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
+
 })
 export class AppComponent {
   title = 'Agro.FrontEnd';
