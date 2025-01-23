@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ɵDeferBlockConfig } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -10,4 +10,14 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 })
 export class HeaderComponent {
   title = 'agrot';
+
+  isAuth() : boolean{
+    var token = localStorage.getItem("JWTToken")
+
+    if(token){
+      return true;
+    }
+
+    return false;
+  }
 }

@@ -3,8 +3,16 @@
     <img src="../../../assets/img/Logo.png" alt="Logo" class="logo-img">
     <span class="logo-text">AgroTracker</span>
   </div>
-  <button class="btn-register" routerLink="login">
-    <img src="../../../assets/img/icons8-пользователь-48.png" alt="Login Icon" class="btn-icon">
-  </button>
+
+  @if(isAuth() === false){
+    <button class="btn-register" routerLink="login">
+      <img src="../../../assets/img/icons8-пользователь-48.png" alt="Login Icon" class="btn-icon">
+    </button>
+  }
+  @else {
+    <button class="btn-register" routerLink="auth">
+      <img src="../../../assets/img/icons8-пользователь-48.png" alt="Login Icon" class="btn-icon">
+    </button>
+  }
 </header>
   
