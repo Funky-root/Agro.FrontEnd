@@ -21,8 +21,7 @@ export class AgroServiceService {
     this.profileData = data;
   }
   getProfileData(user_id: any) {
-    return this.http.get(`http://localhost:8077/api/user/$`)
-    
+    return this.http.get(`http://localhost:8077/api/user/$`);
   }
 
   // Метод для POST-запиту

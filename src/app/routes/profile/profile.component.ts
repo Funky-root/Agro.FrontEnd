@@ -12,6 +12,7 @@ import { AgroServiceService } from '../../agro.service';
 })
 export class ProfileComponent implements OnInit {
 
+  userData: any;
 
   constructor(private prof: AgroServiceService){
 
@@ -25,7 +26,7 @@ export class ProfileComponent implements OnInit {
 
     var tok= localStorage.getItem("decodedtoken")
     var data= JSON.parse(tok as string) 
-    this.prof.getProfileData
+    this.prof.getProfileData(data.sub).subscribe((res) => this.userData = resizeBy);
     
 
   }
