@@ -44,7 +44,7 @@ export class SignupComponent {
         this.authService.Reg(Auth).subscribe(
           (response) => {
             console.log('Account created:', response);
-            this.authService.setProfileData({ name: Auth.name, email: Auth.email, phone:Auth.phoneNumber }); 
+             
             this.router.navigate(['/auth']);
           },
           (error) => {
@@ -54,29 +54,7 @@ export class SignupComponent {
         );
         
       }
-      //signupForm: FormGroup;
-
-  //constructor(private fb: FormBuilder) {
-    //this.signupForm = this.fb.group({
-      //firstName: ['', [Validators.required, Validators.maxLength(40)]],
-      //lastName: ['', [Validators.required, Validators.maxLength(40)]],
-      //phone: [
-        //'',
-        //[Validators.required, Validators.pattern('^[0-9]{10}$')],
-      //],
-      //email: ['', [Validators.required, Validators.email]],
-      //password: ['', [Validators.required, Validators.maxLength(8)]],
-      //confirmPassword: ['', [Validators.required, Validators.maxLength(8)]],
-    //});
-  //}
-
-  //onSubmit(): void {
-    //if (this.signupForm.valid) {
-      //console.log('Форма відправлена!', this.signupForm.value);
-    //} else {
-      //console.log('Форма невалідна');
-    //}
-  //}
+      
 }
 export interface IReqeustAuth{
  name: string,

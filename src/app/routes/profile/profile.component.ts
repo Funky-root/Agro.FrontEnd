@@ -11,11 +11,10 @@ import { AgroServiceService } from '../../agro.service';
   imports: [CommonModule,RouterModule, RouterOutlet  ],
 })
 export class ProfileComponent implements OnInit {
-  profileName: any;
-  profileMail: any;
-  profilePhone: any;
+
 
   constructor(private prof: AgroServiceService){
+
     
 
   }
@@ -23,15 +22,14 @@ export class ProfileComponent implements OnInit {
 
   
   ngOnInit(): void {
-    const profile = this.prof.getProfileData();
-  if (profile) {
-    this.profileName = profile.name;
-    this.profileMail = profile.email;
-    this.profilePhone = profile.phone;
+
+    var tok= localStorage.getItem("decodedtoken")
+    var data= JSON.parse(tok as string) 
+    this.prof.getProfileData
+    
+
   }
-    }
-    title = 'AgroTracker';
-  }
+}
   
   
 
