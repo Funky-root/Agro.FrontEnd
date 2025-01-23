@@ -1,8 +1,8 @@
 <header>
-  <div class="logo">
+  <a class="logo" routerLink="/">
     <img src="../../../assets/img/Logo.png" alt="Logo" class="logo-img">
     <span class="logo-text">AgroTracker</span>
-  </div>
+  </a>
 
   @if(isAuth() === false){
     <button class="btn-register" routerLink="login">
