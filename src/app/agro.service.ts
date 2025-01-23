@@ -51,6 +51,10 @@ export class AgroServiceService {
     return this.http.post(this.baseUrlAuth, regi);
 
   }
+
+  getAllAds(){
+    return this.http.get('http://127.0.0.1:5000/ads/ads');
+  }
   
 }
 
