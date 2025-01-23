@@ -26,7 +26,14 @@ export class AgroServiceService {
 
   // Метод для POST-запиту
   addAd(adData: any): Observable<any> {
-    return this.http.post(`${this.baseUrlAd}/add`, adData);
+    let headers = new HttpHeaders();
+    var token = localStorage.getItem("JWTToken") as string;
+    headers = headers.set('Authorization', `Bearer ${token}`);
+
+
+    return this.http.post(`${this.baseUrlAd}/add`, adData, {
+      headers: headers
+    });
 
   }
   addAdWithImages(formData: FormData) {

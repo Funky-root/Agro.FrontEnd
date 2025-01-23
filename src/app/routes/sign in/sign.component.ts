@@ -41,6 +41,7 @@ export class SignComponent {
                 const helper = new JwtHelperService();
                 const decodedToken = helper.decodeToken(response.token);
                 
+                localStorage.setItem("JWTToken", response.token);
                 console.log('Logged in:', response); 
 
                 localStorage.setItem("decodedtoken", JSON.stringify(decodedToken) )
