@@ -26,7 +26,7 @@ export class ProfileComponent implements OnInit {
 
     var tok= localStorage.getItem("decodedtoken")
     var data= JSON.parse(tok as string) 
-    this.prof.getProfileData(data.sub).subscribe((res) => this.userData = resizeBy);
+    this.prof.getProfileData(data.sub).subscribe((res) => this.userData = res);
     
 
   }
