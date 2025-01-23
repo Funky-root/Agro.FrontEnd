@@ -61,3 +61,10 @@ html, body {
     color: #2e7d32;
     text-decoration: none;
 }
+
+.test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}

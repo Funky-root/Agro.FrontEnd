@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { RouterModule, RouterOutlet } from '@angular/router';
@@ -20,7 +20,7 @@ imports: [
     RouterModule, RouterOutlet, HttpClientModule
   ]
 })
-export class SignupComponent {
+export class SignupComponent implements OnInit {
       requestAuth : IReqeustAuth = {
           name: '',
           surname:'',
@@ -31,6 +31,23 @@ export class SignupComponent {
   
       };
       constructor(private authService: AgroServiceService, private router: Router) {}
+
+  ngOnInit(): void {
+    if(this.isAuth() === true)
+      this.router.navigate(['/auth']);
+  }
+  
+  isAuth() : boolean{
+    var token = localStorage.getItem("JWTToken")
+
+    if(token){
+      return true;
+    }
+
+    return false;
+  }
+
+
       regist(){
         const Auth= {
           name: this.requestAuth.name,

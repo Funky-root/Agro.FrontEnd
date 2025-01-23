@@ -1,22 +1,24 @@
-<div class="container">
-    <router-outlet></router-outlet>
-    <div class="sidebar">
-        <img src="assets/img/Logo.svg" alt="AgroTracker Logo">
-        <h1>AgroTracker</h1>
-    </div>
-    <div class="form-section">
-        <h2>Вхід</h2>
-        <p>Немає акаунту? <a routerLink="/register">Зареєструватися</a></p>
-        <input type="email" 
-        placeholder="Email" 
-        maxlength="25"
-        [(ngModel)]="requestSign.mail"
-        />
-        <input type="password" 
-        placeholder="Пароль" 
-        maxlength="16"
-        [(ngModel)]="requestSign.pass"
-        />
-        <button type="submit" class="btn btn-success" (click)="LogIn()">Увійти</button>
-    </div>
-  </div>
+<div class="test">
+    <div class="container">
+        <router-outlet></router-outlet>
+        <div class="sidebar">
+            <img src="assets/img/Logo.svg" alt="AgroTracker Logo">
+            <h1>AgroTracker</h1>
+        </div>
+        <div class="form-section">
+            <h2>Вхід</h2>
+            <p>Немає акаунту? <a routerLink="/register">Зареєструватися</a></p>
+            <input type="email" 
+            placeholder="Email" 
+            maxlength="25"
+            [(ngModel)]="requestSign.mail"
+            />
+            <input type="password" 
+            placeholder="Пароль" 
+            maxlength="16"
+            [(ngModel)]="requestSign.pass"
+            />
+            <button type="submit" class="btn btn-success" (click)="LogIn()">Увійти</button>
+        </div>
+      </div>
+</div>
