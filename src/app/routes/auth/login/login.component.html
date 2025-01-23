@@ -1,49 +1,47 @@
 <div class="signup-form">
     <h2>Реєстрація</h2>
-    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
       <input
         type="text"
-        formControlName="firstName"
         placeholder="Ім'я"
         maxlength="40"
         required
+        [(ngModel)]="requestAuth.name"
       />
       <input
         type="text"
-        formControlName="lastName"
         placeholder="Прізвище"
         maxlength="40"
         required
+        [(ngModel)]="requestAuth.surname"
       />
       <input
         type="text"
-        formControlName="phone"
         placeholder="Номер телефону"
         maxlength="10"
         required
+        [(ngModel)]="requestAuth.phone"
       />
       <input
         type="email"
-        formControlName="email"
         placeholder="Email"
         required
+        [(ngModel)]="requestAuth.mail"
       />
       <input
         type="password"
-        formControlName="password"
         placeholder="Пароль"
-        maxlength="8"
+        maxlength="16"
         required
+        [(ngModel)]="requestAuth.key"
       />
       <input
         type="password"
-        formControlName="confirmPassword"
         placeholder="Підтвердити пароль"
-        maxlength="8"
-        required
+        maxlength="16"
+        [(ngModel)]="requestAuth.conkey"
+
       />
-      <a routerLink="/auth"><button type="submit" [disabled]="!signupForm.valid">Зареєструватися</button></a>
-    </form>
+      <button type="submit" class="btn btn-success" (click)="regist()">Зареєструватися</button>
   </div>
   
     

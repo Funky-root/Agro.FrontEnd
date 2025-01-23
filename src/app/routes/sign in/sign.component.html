@@ -7,8 +7,16 @@
     <div class="form-section">
         <h2>Вхід</h2>
         <p>Немає акаунту? <a routerLink="/register">Зареєструватися</a></p>
-        <input type="email" placeholder="Email" maxlength="16">
-        <input type="password" placeholder="Пароль" maxlength="8">
-        <button (click)="login()">Увійти</button>
+        <input type="email" 
+        placeholder="Email" 
+        maxlength="25"
+        [(ngModel)]="requestSign.mail"
+        />
+        <input type="password" 
+        placeholder="Пароль" 
+        maxlength="16"
+        [(ngModel)]="requestSign.pass"
+        />
+        <button type="submit" class="btn btn-success" (click)="LogIn()">Увійти</button>
     </div>
   </div>

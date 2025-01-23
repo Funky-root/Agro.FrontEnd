@@ -1,12 +1,12 @@
 <div class="profile-container">
   <div class="profile-photo-section">
     <img class="profile-photo" src="assets\img\prof.png" alt="Profile Picture" />
-    <button class="upload-btn">Додати фото</button>
+    {{requestAdsCreate.name}}
+    <button class="upload-btn"><input type="file" (change)="onFileSelected($event)" multiple />Додати фото</button>
   </div>
 
 
 <div class="form-container">
-    <form (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="name">Вкажіть назву</label>
         <input
@@ -18,6 +18,7 @@
           maxlength="100"
           ngModel
           required
+          [(ngModel)]="requestAdsCreate.name"
         />
       </div>
   
@@ -31,6 +32,7 @@
           maxlength="1000"
           ngModel
           rows="3"
+          [(ngModel)]="requestAdsCreate.desc"
         >
       </div>
   
@@ -44,6 +46,7 @@
           placeholder="Введіть назву міста"
           maxlength="100"
           ngModel
+          [(ngModel)]="requestAdsCreate.location"
         />
       </div>
   
@@ -56,13 +59,13 @@
           class="form-control"
           placeholder="Вкажіть ціну"
           ngModel
+          [(ngModel)]="requestAdsCreate.value"
         />
       </div>
   
       <div class="form-actions">
         <button type="button" class="btn btn-secondary" (click)="onCancel()"><a routerLink="cancel">Відмінити</a></button>
-        <button type="submit" class="btn btn-success" (click)="createAd()"><a routerLink="/confirm">Опублікувати</a></button>
+        <button type="submit" class="btn btn-success" (click)="createAd()">Опублікувати</button>
       </div>
-    </form>
   </div>
   
