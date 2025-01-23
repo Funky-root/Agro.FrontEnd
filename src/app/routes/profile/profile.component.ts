@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { AgroServiceService } from '../../agro.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
   userData: any;
   advData: any;
 
-  constructor(private prof: AgroServiceService){
+  constructor(private prof: AgroServiceService, private router: Router){
 
     
 
@@ -31,6 +31,12 @@ export class ProfileComponent implements OnInit {
     
 
     this.prof.getAllByUserId().subscribe((res) => this.advData = res)
+  }
+
+  exit(){
+    localStorage.clear();
+
+    this.router.navigate(['/']);
   }
 }
   

@@ -20,7 +20,6 @@ export class MainComponent implements OnInit {
   }
   ngOnInit(): void {
     this.httpClient.getAllAds().subscribe((res) => this.data = res);
-    
   }
 
   title = 'agrot';
