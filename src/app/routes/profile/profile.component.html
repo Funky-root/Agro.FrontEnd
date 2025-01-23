@@ -1,24 +1,40 @@
 <div class="header">
-    <div class="logo-title">
+  <div class="logo-title">
     <a href="#" class="logout">Вихід →</a>
   </div>
-  
-    <div class="profile">
-      <img src="assets/img/pngegg.png" alt="User Photo" class="profile-photo" />
-      <div class="profile-info">
-        <h2></h2>
-        <p>Ім'я: {{userData.name}}<p>
-        <p>Номер телефону: {{userData.phoneNumber}}</p>
-        <p>Email: {{userData.email}}</p>
-      </div>
-      <button class="edit-button"><a routerLink="/edit">✏️</a></button>
+
+  <div class="profile">
+    <img src="assets/img/pngegg.png" alt="User Photo" class="profile-photo" />
+    <div class="profile-info">
+      <h2></h2>
+      <p>Ім'я: {{userData.name}}
+      <p>
+      <p>Номер телефону: {{userData.phoneNumber}}</p>
+      <p>Email: {{userData.email}}</p>
     </div>
-  
-    <div class="requests">
-      <img src="assets/img/pngwing.com.png" alt="smile" class="smile">
-      <h3>Мої Заявки:</h3>
-      <div class="empty-requests">
-        <p>Упс... У Вас ще немає заявок</p>
-        <button class="create-button"><a routerLink="/create">Створити заявку</a></button>
+    <button class="edit-button"><a routerLink="/edit">✏️</a></button>
+  </div>
+
+  <div class="requests">
+    <img src="assets/img/pngwing.com.png" alt="smile" class="smile">
+    <h3>Мої Заявки:</h3>
+    <div class="empty-requests">
+      <p>Упс... У Вас ще немає заявок</p>
+      <button class="create-button"><a routerLink="/create">Створити заявку</a></button>
+    </div>
+  </div>
+
+  @for(item of advData.adv; track item.id){
+    <div class="service">
+      <img src="assets/img/comb.jfif" alt="Service Image" />
+      <div class="service-info">
+        <h3> {{item.title}}</h3>
+        <p>📍 {{item.location}}</p>
+        <p>Техніка: Трактор-обприскувач JohnDeer</p>
+        <p>Рік випуску: 2016 рік</p>
+        <p class="price">{{item.price}}₴/га</p>
+        <a href="#" class="more-btn" routerLink="more">Більше →</a>
       </div>
     </div>
+  }
+</div>

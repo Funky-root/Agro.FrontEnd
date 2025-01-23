@@ -56,5 +56,15 @@ export class AgroServiceService {
     return this.http.get('http://127.0.0.1:5000/ads/ads');
   }
   
+
+  getAllByUserId(){
+    let headers = new HttpHeaders();
+    var token = localStorage.getItem("JWTToken") as string;
+    headers = headers.set('Authorization', `Bearer ${token}`);
+
+    return this.http.get('http://127.0.0.1:5000/user/profile', {
+      headers: headers
+    });
+  }
 }
 

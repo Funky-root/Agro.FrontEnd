@@ -13,6 +13,7 @@ import { AgroServiceService } from '../../agro.service';
 export class ProfileComponent implements OnInit {
 
   userData: any;
+  advData: any;
 
   constructor(private prof: AgroServiceService){
 
@@ -29,6 +30,7 @@ export class ProfileComponent implements OnInit {
     this.prof.getProfileData(data.sub).subscribe((res) => this.userData = res);
     
 
+    this.prof.getAllByUserId().subscribe((res) => this.advData = res)
   }
 }
   
