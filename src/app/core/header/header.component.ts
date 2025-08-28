@@ -1,23 +1,32 @@
-import { Component, ɵDeferBlockConfig } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router, NavigationEnd, RouterModule, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'main-header',
   standalone: true,
-  imports: [RouterOutlet, RouterModule ],
+  imports: [RouterOutlet, RouterModule, CommonModule],
   templateUrl: 'header.component.html',
   styleUrl: 'header.component.css'
 })
 export class HeaderComponent {
   title = 'agrot';
+  hideHeader = false;
 
-  isAuth() : boolean{
-    var token = localStorage.getItem("JWTToken")
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: any) => {
+        const url = event.urlAfterRedirects || event.url;
+        this.hideHeader = url.startsWith('/login') || url.startsWith('/register');
+      });
+  }
 
-    if(token){
-      return true;
-    }
-
-    return false;
+  isAuth(): boolean {
+    const token = localStorage.getItem('JWTToken');
+    return !!token;
   }
 }
+
+

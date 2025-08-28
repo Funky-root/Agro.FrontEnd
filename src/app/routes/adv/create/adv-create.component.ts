@@ -48,7 +48,7 @@ export class AdvCreateComponent {
     formData.append('description', this.requestAdsCreate.desc);
     formData.append('location', this.requestAdsCreate.location);
     formData.append('price', this.requestAdsCreate.value.toString());
-    formData.append('user_id', '1'); 
+     
 
     
     this.files.forEach((file) => {

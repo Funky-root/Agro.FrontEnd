@@ -13,6 +13,6 @@ export class ConfirmationComponent {
   constructor(private router: Router) {}
 
   navigateToHome(): void {
-    this.router.navigate(['/main']); // Шлях до головної сторінки
+    this.router.navigate(['/main']);
   }
 }
