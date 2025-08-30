@@ -1,4 +1,3 @@
-/* Загальні стилі */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +5,7 @@ body {
   }
   
 
-  /* Hero section */
+ 
   .hero {
     display: flex;
     justify-content: space-between;
@@ -46,7 +45,7 @@ body {
   
   
   
-  /* About Section */
+ 
   .about {
     padding: 40px 20px;
     background-color: #fff;
@@ -107,7 +106,7 @@ body {
     font-size: 18px;
   }
   
-  /* Join section */
+
   .join {
     display: flex;
     justify-content: center;
@@ -152,7 +151,7 @@ body {
   
   
   
-  /* Загальні стилі */
+  
   body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -219,7 +218,7 @@ body {
     background-color: #bbb;
   }
   
-  /* Список послуг */
+  
   .services-list {
     flex: 3;
   }
@@ -303,4 +302,103 @@ body {
     text-decoration: underline;
   }
   
+/* Планшет */
+@media screen and (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .about-content {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .about-image img {
+    width: 250px;
+  }
+
+  .services {
+    flex-direction: column;
+  }
+
+  .filters {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Телефон */
+@media screen and (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
   
+  .about-content {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .about-image img {
+    width: 150px;
+  }
+
+  .about-list b {
+    font-size: 16px;
+  }
+
+  .about-list p {
+    font-size: 14px;
+  }
+
+  .join-content h2 {
+    font-size: 22px;
+  }
+
+  .join-content p {
+    font-size: 14px;
+  }
+
+  .btn-join {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .search input {
+    width: 120px;
+    font-size: 14px;
+  }
+
+  .service {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .service img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .service-info h3 {
+    font-size: 16px;
+  }
+
+  .service-info p {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+}
